@@ -8,5 +8,5 @@ SASS, Jade, semantic gs, Strongarm, Grunt
 
 #Why?
 
-Creating an MLS aggregator and automatic the client-buyer homebuying process yo.
+Creating an MLS aggregator and automating the client-buyer homebuying process yo.
 
