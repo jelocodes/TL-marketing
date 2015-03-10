@@ -1,0 +1,233 @@
+doctype html
+html(lang='en')
+	head
+		include includes/header 		
+	body		
+		div.wrapper
+			header.header#header
+				button.btn-menu#btn-menu(data-icon-name="hambugerCross", type="button")
+					svg.toggle(height="64", version="1.1", width="64", xmlns="http://www.w3.org/2000/svg", viewBox="0 0 64 64")
+						g <path class="path" fill="#888" stroke="#888" stroke-width="5" stroke-linejoin="bevel" d="M5.0916789,20.818994C5.0916789,20.818994,58.908321,20.818994,58.908321,20.818994"></path>
+						<path class="path" fill="#888" stroke="#888" stroke-width="5" stroke-linejoin="bevel" d="m 5.1969746,31.909063 53.8166424,0" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></path>
+						<path class="path" fill="#888" stroke="#888" stroke-width="5" stroke-linejoin="bevel" d="M5.0916788,42.95698C5.0916788,42.95698,58.908321,42.95698,58.908321,42.95698"></path>
+				div.menu#menu 
+					nav
+						ul
+							li 
+								h1.logo 
+								a(href="#")
+									img.logo(src="img/logo.png")  
+							li 
+								a(href="#faq") FAQ
+							li 
+								a(href="#social") Social Advertising
+							li 
+								a(href="#search") Paid Search Packages
+							li 
+								a(href="#seo") SEO Packages
+							li 
+								a(href="#home") Home
+
+			section#seo 
+
+				div.wrap 
+					ul.tabs.group
+						li 
+							a.active(href="#/one") First
+						li
+							a(href="#/two") Second
+						li
+							a(href="#/three") Third
+						li
+							h5.seo Search Engine Optimization - 
+							//- a(href="#more") Learn More
+						li 
+							a.seo(href="#more") Learn more
+
+
+					div#content
+						div.block.personal.f1
+							h2.title Business
+							div.content
+								p.price 
+									sup $ 
+									span 500
+									sub /mo.
+								p.hint Perfect for freelancers
+							//- ul.features
+							//- 	li 
+							//- 		span.fontawesome-cog blah
+							//- 	li
+							//- 		span.fontawesome-star blah2
+							//- 	li
+							//- 		span.fontawesome-dashboard blah3
+							//- 	li
+							//- 		span.fontawesome-cloud blah4
+							div.pt-footer
+								button#business.subscribe Subscribe
+
+						div.block.professional.f1
+							h2.title Professional
+							div.content
+								p.price
+									sup $
+									span 1000
+									sub /mo.
+								p.hint Suitable for startups
+							//- ul.features
+							//- 	li 
+							//- 		span.fontawesome-cog blah
+							//- 	li
+							//- 		span.fontawesome-star blah2
+							//- 	li
+							//- 		span.fontawesome-dashboard blah3
+							//- 	li
+							//- 		span.fontawesome-cloud blah4
+							div.pt-footer
+								button#professional.subscribe Subscribe
+
+						div.block.business.f1
+							h2.title Elite
+							div.content
+								p.price
+									sup $
+									span 1500
+									sub /mo.
+								p.hint For established business
+							//- ul.features
+							//- 	li 
+							//- 		span.fontawesome-cog blah
+							//- 	li
+							//- 		span.fontawesome-star blah2
+							//- 	li
+							//- 		span.fontawesome-dashboard blah3
+							//- 	li
+							//- 			span.fontawesome-cloud blah4
+							div.pt-footer
+								button#elite.subscribe Subscribe
+
+
+						//- p#two  2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, tempore, totam. Est, vel hic fuga officiis. Cum quis, magni tempora ea aspernatur natus adipisci repellat doloremque, laudantium distinctio totam, quam?
+						//- p#three  3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati ab suscipit omnis! Eos atque laboriosam, voluptatum provident quidem modi. Velit, inventore cum quia impedit odio. Obcaecati, at eum consequatur distinctio?
+
+					h2 Select Your Upgrade 	
+					//- p.upgrade No Upgrade Selected	
+
+					form(action="api.php", class="purchase", method="post")
+						input(type="text", name="agent_package", value="No Upgrade Selected", class="upgrade", readonly)
+						input(type="text", name="agent_bugget", class="budget", placeholder="Enter Custom Budget")
+						input(type="text", name="agent_email", class="email", placeholder="Enter Agent Email")
+						input(type="submit", value="Pay Now", class="submitButton")
+			
+			section#more
+
+				h2 What does being on the first page mean?
+				h3 Why SEO drives leads
+
+				img.inBody(src="img/seo.png")  
+
+				p You've heard great things about SEO and getting to the top of Google. But what does it mean to be there?
+				p The short answer is more traffic to your website, and of course, more traffic means more leads & sales for your team.
+				ul
+					li 80% of organic traffic is captured by top 3 results
+					li 72% of all traffic goes to organic search results
+					li AdWords only captures 28% of all searches for all ads 
+
+				p We have a SEO product that will take your lead aquisition to the next level.
+
+				h4 SEO is a power hitter, delivering:
+
+				ul
+					li Increased Traffic - Top positions receive majority of impressions and clicks
+					li ROI - Trackable and quantifiable results - rank improvements, traffic, leads
+					li Cost Effective - Users are actively looking for homes/real estate online
+					li Brand Awareness - Significant search impressions translates to more exposure
+					li Better Conversion Rates - Visitors more likely to become customers
+					li Bypass Competition - Your site is optimized, the competition's isn't. Who is more successful?
+
+				p SEO is about more than simply outranking the competition for the top spot. It's about marketing your content and ranking multiple pages for multiple search terms, so that when people search, they only get results that point to your pages.
+
+				h4 Our SEO Packages include:
+
+				ul
+					li Keyword Analysis - Identifies the most profitable keywords to dominate
+					li Content Promotion - Content distribution, backlinking to increase authority
+					li Linking & indexing - Ensures content & links are completely indexed by Google
+					li SEO Reporting - How your rank is improving, analytical data showing traffic improvements
+
+				p We recommend the Business package for smaller markets and teams and Professional/Elite for larger markets, or teams looking to dominate the organic search results across multiple pages.
+
+				p You can enjoy top positioning in your marketplace, capturing rankings of high-value, targeted keywords across multiple ranking positions, all working together to generate the new wave of leads you need.
+
+				button.subscribe Subscribe
+
+			section#highimpact
+
+				h2 High-Impact Lead Generation
+				h3 Direct Response Paid Search
+
+				img.sem(src="img/SEM.png")  
+
+				p Having your site show up for high-value search queries is everything. We use Search Advertising to position your website on search engines, capturing precise, targeted searchers actively looking to buy or sell in your local real estate market.
+
+				ul
+					li AdWords captures 28% of all search engine queries
+					li Search Advertising is a direct response strategy that is able to generate immediate traffic and leads
+					li By targeting keywords, we capture lower sales funnel traffic that is more likely to result in a paying customer, not just another lead
+
+				h4 Search & Display Advertising Delivers:
+
+				P Research and selection of keywords, or search queries, that are most relevant to your business, creating 'keyword groupings' that are paired with tailored ads. Some accounts may have up to 30,000 keyword variations for targeting.
+
+				p Search Advertising (AdWords, Yahoo!/Bing) is an auction based model where both a bid and a 'Quality Score' determine where and when your ad is shown. We optimize these two variables for each keyword in your campaign, all based on lead generation performance and your cost-per-head. 
+
+				h4 Our Search & Display Advertising Package includes:
+
+				ul
+					li Keyword Research & Campaign Structuring - Structuring your keywords and ads for maximum efficiency
+					li Account Optimization - Prioritizing individual keywords based on lead generation performance
+					li Reporting - Detailed performance data including advertising costs, lead generated, and cost-per-lead
+
+				p All activity is Pay-Per-Click (PPC) based and designed around lead generation.
+
+				p We recommend a minimum of $500 for smaller markets and teams and $1000-$1500 for larger <strong>markets, or teams looking to dominate the advertising space.</strong>
+
+				p There's a reason Search Advertising is wide-spread and efficient - the more you spend, the more you get in return.
+
+				button Subscribe
+
+			section#social
+
+				h2 Social Lead Generation
+				h3 Finely Tuned Push marketing
+
+				img.fb(src="img/facebook.png")
+
+				p Facebook advertising allows us to reach existing or new customers on Faccebook using customer information you already have.
+
+				p We are able to deliver targeted ads to people that match your target demographic, as well as those who have already visited your website, but didn't register as a lead.
+
+				h4 Social Advertising Delivers:
+
+				ul
+					li Website visitor retargeting: Re-engage Facebook users who bounced from your site without registering, giving them a reason to reconsider your team with a strong call to action.
+					li Retarget at the property type level: it's now possible to re-engage visitors based on the property type they last viewed on your website, reaching out to them with tailored and creative messaging.
+					li Detailed demographic targeting: Target home owners in your area that may be interested in selling. A wide range of demographic is available for targeting, including: age, martial status, home ownership status, individual income.
+
+				h4 Our Social Advertising Package Includes:
+
+				ul
+					li Demographic Research & Campaign Structuring - Structuring your targeting and ads to capture the most relevant audience for lead generation.
+					li Account Optimization - Targeting adjustments based on lead generation and cost-per-lead.
+					li Reporting - Detailed performance data including advertising cossts, leads generated, and cost-per-lead.
+
+				p All activity is Pay-Per-Click (PPC) based and designed around lead generation.
+
+				p We recommend a minimum of $250 for smaller markets and teams, and $500-750 for larger markets or teams looking to dominate their immediate area on Facebook.
+
+				p Facebook Advertising is not only great at capturing a demographically relevant audience - your brand recognition will increase, producing a halo effect in other marketing channels.
+
+
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+
+
