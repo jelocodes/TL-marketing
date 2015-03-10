@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 	-webkit-margin-after:0em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h5, h6 {
 	margin: 0;
 	padding: 0;
 	text-transform: uppercase;
@@ -239,6 +239,7 @@ div.wrapper {
   top:-34px;
   margin:0 auto;
   text-align:center;
+  width:87%;
 }
 
 ul.tabs.group {
@@ -381,28 +382,60 @@ input {
 	text-align:center;
 }
 
+h2.select {
+	margin-top: 12px;
+	font-size:1.7em;
+}
+
 input.upgrade {
 	display:inline-block;
 	width:auto;
+	color:$TLred;
+	text-transform:uppercase;
+	border:none;
+	padding:4px;
+	font-family: "Quicksand Bold","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	font-size:15px;
+	margin-top:-1px;
+	margin-bottom:10px;
 }
 
 input.budget {
 	display:block;
-	width:auto;
+	width:168px;
 	margin:0 auto;
+	text-transform:uppercase;
+	padding:8px;
+	font-family: "Quicksand Bold","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	font-size:11px;
+	background-color:#e6e6e6;
+	border:none;
+
 }
 
 input.email {
 	display:inline-block;
-	width:auto;
+	width:168px;
 	margin-right:5px;
 	position:relative;
 	left:38px;
+	text-transform:uppercase;
+	padding:8px;
+	font-family: "Quicksand Bold","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	font-size:11px;
+	background-color:#e6e6e6;
+	border:none;
 }
 
 input.submitButton {
 	position: relative;
-	left:40px;
+	left:42px;
+	background-color:$TLred;
+	color:$white;
+	text-transform:uppercase;
+	padding:7px;
+	font-family: "Quicksand Bold","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	border:none;
 }
 
 // IMAGES
@@ -564,4 +597,23 @@ margin: 0 auto;
 }
 .business .pt-footer:after {	
 	border-top-color: #FFFFFF;	
+}
+
+// BUTTONS
+
+button.subscribe {
+	text-transform:uppercase;
+	padding:8px;
+	font-family: "Quicksand Bold","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	font-size:11px;
+	background-color:#4da6ff;
+	color:white;
+	border:none;
+}
+
+h4.gray {
+	display:inline;
+	background:#e6e6e6;
+	font-family: $headingsfontfamily;
+	text-rendering: optimizelegibility;
 }
