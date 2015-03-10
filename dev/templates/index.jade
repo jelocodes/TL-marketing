@@ -26,13 +26,13 @@ html(lang='en')
 							li 
 								a(href="#seo") SEO Packages
 							li 
-								a(href="#home") Home
+								a(href="http://teamleads.com") Home
 
 			section#seo 
 
 				div.wrap 
 					ul.tabs.group
-						li.first 
+						li.first#home 
 							a.active(href="#/one") First
 						li
 							a(href="#/two") Second
@@ -50,10 +50,10 @@ html(lang='en')
 							h2.title Business
 							div.content
 								p.price 
-									sup $ 
+									sup   $ 
 									span 500
 									sub /mo.
-								p.hint Perfect for freelancers
+								//- p.hint Perfect for freelancers
 							//- ul.features
 							//- 	li 
 							//- 		span.fontawesome-cog blah
@@ -64,16 +64,16 @@ html(lang='en')
 							//- 	li
 							//- 		span.fontawesome-cloud blah4
 							div.pt-footer
-								button#business.subscribe <i class="fa fa-line-chart"></i> Subscribe
+								button#business.subscribe.columns <i class="fa fa-line-chart"></i> Subscribe
 
 						div.block.professional.f1
 							h2.title Professional
 							div.content
 								p.price
-									sup $
+									sup   $
 									span 1000
 									sub /mo.
-								p.hint Suitable for startups
+								//- p.hint Suitable for startups
 							//- ul.features
 							//- 	li 
 							//- 		span.fontawesome-cog blah
@@ -84,7 +84,7 @@ html(lang='en')
 							//- 	li
 							//- 		span.fontawesome-cloud blah4
 							div.pt-footer
-								button#professional.subscribe <i class="fa fa-line-chart"></i> Subscribe
+								button#professional.subscribe.columns <i class="fa fa-line-chart"></i> Subscribe
 
 						div.block.business.f1
 							h2.title Elite
@@ -93,7 +93,7 @@ html(lang='en')
 									sup $
 									span 1500
 									sub /mo.
-								p.hint For established business
+								//- p.hint For established business
 							//- ul.features
 							//- 	li 
 							//- 		span.fontawesome-cog blah
@@ -104,7 +104,7 @@ html(lang='en')
 							//- 	li
 							//- 			span.fontawesome-cloud blah4
 							div.pt-footer
-								button#elite.subscribe <i class="fa fa-line-chart"></i> Subscribe
+								button#elite.subscribe.columns <i class="fa fa-line-chart"></i> Subscribe
 
 
 						//- p#two  2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, tempore, totam. Est, vel hic fuga officiis. Cum quis, magni tempora ea aspernatur natus adipisci repellat doloremque, laudantium distinctio totam, quam?
@@ -113,7 +113,7 @@ html(lang='en')
 					h2.select Select Your Upgrade 	
 					//- p.upgrade No Upgrade Selected	
 
-					form(action="api.php", class="purchase", method="post")
+					form(action="api.php", class="purchase", method="post", id="upgrade")
 						input(type="text", name="agent_package", value="No Upgrade Selected", class="upgrade", readonly)
 						input(type="text", name="agent_bugget", class="budget", placeholder="Enter Custom Budget")
 						input(type="text", name="agent_email", class="email", placeholder="Enter Agent Email")
@@ -268,6 +268,29 @@ html(lang='en')
 				div.subscribe
 					button.subscribe <i class="fa fa-line-chart"></i> Subscribe
 				br
+
+			section#faq 
+
+				h2 FAQ
+				br
+
+				h4 What happens when I click "Pay Now"? How am I billed?
+				br
+
+				p After you select your Marketing Upgrade and "Pay Now," you will receive a notification email detailing your package and budget upgrade. Our billing team will review the upgrade request and will confirm billing details with you, including a final confirmation and method of payment.
+				br
+
+				h4 When will my package upgrade take effect?
+				br
+
+				p All billing activity is processed at the beginning of each month. Once payment has been received, your upgrade will take immediate effect. If you wish to upgrade before the 1st of the month, kindly let our billing team know when they contact you to confirm. You will then be charged the full amount of the requested upgrade, and again at the beginning of the following month.
+				br
+
+				h4 Where can I learn more about the marketing packages?
+				br
+
+				p Detailed information on our marketing packages and strategies is available within the 
+					a(href="http://help.teamleads.com/hc/en-us/categories/200304639-Marketing") Team Leads Help Center.
 
 
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")

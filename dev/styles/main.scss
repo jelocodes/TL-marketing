@@ -147,7 +147,7 @@ ol ul {
 	max-width:150px;
 	float:left;
 	position: absolute;
-	top:28%;
+	top:40%;
 	left:3%;
 }
 
@@ -342,11 +342,12 @@ border-top:1px solid rgb(64,64,152);
 }
 div#content p{
   font-family: 'Open Sans', sans-serif;
-  padding: 30px 40px;
+  padding: 22px 15px;
   color: #ffffff;
   line-height: 26px;
   font-size: 17px;
   margin: 0;
+  margin-bottom:70px;
 }
 #one {
   
@@ -384,7 +385,7 @@ input {
 
 h2.select {
 	margin-top: 12px;
-	font-size:1.7em;
+	font-size:2em;
 }
 
 input.upgrade {
@@ -479,12 +480,12 @@ margin: 0 auto;
     margin-bottom: 4rem;
 }
 .block{
-    width: 30%;    
+    width: 25%;    
     margin: 0 15px;
     overflow: hidden;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;    
+    // -webkit-border-radius: 5px;
+    // -moz-border-radius: 5px;
+    // border-radius: 5px;    
     display:inline-block;
 /*    border: 1px solid red;*/
 }
@@ -511,9 +512,9 @@ margin: 0 auto;
 	position: absolute;
 	pointer-events: none;
 }
-.pt-footer:after,.pt-footer:before{
-    top:0;
-}
+// .pt-footer:after,.pt-footer:before{
+//     top:0;
+// }
 .content:after,.pt-footer:after {
 	border-color: rgba(136, 183, 213, 0);	
 	border-width: 5px;
@@ -561,10 +562,13 @@ margin: 0 auto;
 }
 /*PERSONAL*/
 .personal .title{        
-    background: #78CFBF;    
+    background: #78CFBF;
+    // background:rgb(54,184,120);
+    text-transform:uppercase;    
 }
 .personal .content,.personal .pt-footer{
     background: #82DACA;
+    // background:rgb(25,157,99);
 }
 .personal .content:after{	
 	border-top-color: #82DACA;	
@@ -575,9 +579,12 @@ margin: 0 auto;
 /*PROFESSIONAL*/
 .professional .title{
     background: #3EC6E0;
+    // background:rgb(110,187,233);
+    text-transform:uppercase;  
 }
 .professional .content,.professional .pt-footer{
     background: #53CFE9;
+    // background:rgb(96,161,201);
 }
 .professional .content:after{	
 	border-top-color: #53CFE9;	
@@ -588,9 +595,12 @@ margin: 0 auto;
 /*BUSINESS*/
 .business .title{
     background: #E3536C;
+    // background:rgb(59,90,154);
+    text-transform:uppercase;  
 }
 .business .content,.business .pt-footer{
     background: #EB6379;
+    // background: rgb(42,64,111);
 }
 .business .content:after{	
 	border-top-color: #EB6379;	
@@ -603,9 +613,9 @@ margin: 0 auto;
 
 button.subscribe {
 	text-transform:uppercase;
-	padding:8px;
+	padding:10px 12px;
 	font-family: "Quicksand Bold","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
-	font-size:11px;
+	font-size:14px;
 	background-color:#4da6ff;
 	color:white;
 	border:none;
@@ -621,7 +631,7 @@ h4.gray {
 
 div.subscribe {
 	text-align:center;
-	margin:0 auto;
+	margin:0 auto;	
 }
 
 li:first-child { 
@@ -634,4 +644,9 @@ li:first-child {
 
 li.first {
 	margin-top:0px;
+}
+
+button.subscribe.columns {
+	bottom: 24px;
+	position: relative;
 }
