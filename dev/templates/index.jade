@@ -12,11 +12,11 @@ html(lang='en')
 				div.menu#menu 
 					nav
 						ul
-							li 
+							li.first
 								h1.logo 
 								a(href="#")
 									img.logo(src="img/logo.png")  
-							li 
+							li.first 
 								a(href="#faq") FAQ
 							li 
 								a(href="#social") Social Advertising
@@ -32,17 +32,17 @@ html(lang='en')
 
 				div.wrap 
 					ul.tabs.group
-						li.first#home 
-							a.active(href="#/one") First
+						li.first.uno#home 
+							a.uno.active(href="#/one") First
+						li.second
+							a.second(href="#/two") Second
+						li.third
+							a.third(href="#/three") Third
 						li
-							a(href="#/two") Second
-						li
-							a(href="#/three") Third
-						li
-							h5.seo Search Engine Optimization - 
+							h5.seo.seoTitle Search Engine Optimization  
 							//- a(href="#more") Learn More
 						li 
-							a.seo(href="#more") Learn more
+							a.seo(href="#more") - Learn more
 
 
 					div#content
@@ -118,13 +118,23 @@ html(lang='en')
 						input(type="text", name="agent_bugget", class="budget", placeholder="Enter Custom Budget")
 						input(type="text", name="agent_email", class="email", placeholder="Enter Agent Email")
 						input(type="submit", value="Pay Now", class="submitButton")
-						//- label 
-						//- 	input(type="checkbox", required="required", name="terms") I accept the 
-						//- 						a(href="#") Terms and Conditions
+						p.conditions I accept the 
+							a(href="#modal", id="link") Terms of Purchase
+							input#terms(type="checkbox", name="terms", required) 
+					div.overlay
+					div#modal
+						h1 Terms of Purchase
+						
+						p <strong>Terms:</strong> Contracts for marketing may be terminated, or the Monthly Marketing Spend may be decreased, only upon Client providing Team Leads with a minimum of 90 clear days’ notice of termination or reduction. If any shorter period of termination or reduction notice is given Client shall still be obligated to pay for the full amount of contracted Monthly Marketing Spend for the next ensuing three (3) months. Although Team Leads will strive to generate as many leads as possible at the lowest cost per lead, the volume and cost per lead are dependent upon market and package.
+						br
+						p.conditions I accept the 
+							a(href="#modal") Terms of Purchase
+							input#checkbox(type="checkbox", name="terms", required) 
+
 			
 			section#more
 
-				h2 What does being on the first page mean?
+				h2.sections What does being on the first page mean?
 				h3 Why SEO drives leads
 				br
 
@@ -135,9 +145,9 @@ html(lang='en')
 				p The short answer is more traffic to your website, and of course, more traffic means more leads & sales for your team.
 				br
 				ul
-					li.first <i class="fa fa-check"></i> 80% of organic traffic is captured by top 3 results
-					li <i class="fa fa-check"></i> 72% of all traffic goes to organic search results
-					li <i class="fa fa-check"></i> AdWords only captures 28% of all searches for all ads 
+					li.first.sections <i class="fa fa-check"></i> 80% of organic traffic is captured by top 3 results
+					li.sections <i class="fa fa-check"></i> 72% of all traffic goes to organic search results
+					li.sections <i class="fa fa-check"></i> AdWords only captures 28% of all searches for all ads 
 				br
 
 				p We have a SEO product that will take your lead aquisition to the next level.
@@ -147,12 +157,12 @@ html(lang='en')
 				
 				br
 				ul
-					li <i class="fa fa-check"></i> Increased Traffic - Top positions receive majority of impressions and clicks
-					li <i class="fa fa-check"></i> ROI - Trackable and quantifiable results - rank improvements, traffic, leads
-					li <i class="fa fa-check"></i> Cost Effective - Users are actively looking for homes/real estate online
-					li <i class="fa fa-check"></i> Brand Awareness - Significant search impressions translates to more exposure
-					li <i class="fa fa-check"></i> Better Conversion Rates - Visitors more likely to become customers
-					li <i class="fa fa-check"></i> Bypass Competition - Your site is optimized, the competition's isn't. Who is more successful?
+					li.sections <i class="fa fa-check"></i> Increased Traffic - Top positions receive majority of impressions and clicks
+					li.sections <i class="fa fa-check"></i> ROI - Trackable and quantifiable results - rank improvements, traffic, leads
+					li.sections <i class="fa fa-check"></i> Cost Effective - Users are actively looking for homes/real estate online
+					li.sections <i class="fa fa-check"></i> Brand Awareness - Significant search impressions translates to more exposure
+					li.sections <i class="fa fa-check"></i> Better Conversion Rates - Visitors more likely to become customers
+					li.sections <i class="fa fa-check"></i> Bypass Competition - Your site is optimized, the competition's isn't. Who is more successful?
 				br
 
 				p SEO is about more than simply outranking the competition for the top spot. It's about marketing your content and ranking multiple pages for multiple search terms, so that when people search, they only get results that point to your pages.
@@ -161,10 +171,10 @@ html(lang='en')
 				h4.gray Our SEO Packages include:
 
 				ul
-					li <i class="fa fa-check"></i> Keyword Analysis - Identifies the most profitable keywords to dominate
-					li <i class="fa fa-check"></i> Content Promotion - Content distribution, backlinking to increase authority
-					li <i class="fa fa-check"></i> Linking & indexing - Ensures content & links are completely indexed by Google
-					li <i class="fa fa-check"></i> SEO Reporting - How your rank is improving, analytical data showing traffic improvements
+					li.sections <i class="fa fa-check"></i> Keyword Analysis - Identifies the most profitable keywords to dominate
+					li.sections <i class="fa fa-check"></i> Content Promotion - Content distribution, backlinking to increase authority
+					li.sections <i class="fa fa-check"></i> Linking & indexing - Ensures content & links are completely indexed by Google
+					li.sections <i class="fa fa-check"></i> SEO Reporting - How your rank is improving, analytical data showing traffic improvements
 				br
 
 				p We recommend the Business package for smaller markets and teams and Professional/Elite for larger markets, or teams looking to dominate the organic search results across multiple pages.
@@ -179,7 +189,7 @@ html(lang='en')
 
 			section#highimpact
 
-				h2 High-Impact Lead Generation
+				h2.sections High-Impact Lead Generation
 				h3 Direct Response Paid Search
 				br
 
@@ -189,9 +199,9 @@ html(lang='en')
 				br
 
 				ul
-					li <i class="fa fa-check"></i> AdWords captures 28% of all search engine queries
-					li <i class="fa fa-check"></i> Search Advertising is a direct response strategy that is able to generate immediate traffic and leads
-					li <i class="fa fa-check"></i> By targeting keywords, we capture lower sales funnel traffic that is more likely to result in a paying customer, not just another lead
+					li.first.sections <i class="fa fa-check"></i> AdWords captures 28% of all search engine queries
+					li.sections <i class="fa fa-check"></i> Search Advertising is a direct response strategy that is able to generate immediate traffic and leads
+					li.sections <i class="fa fa-check"></i> By targeting keywords, we capture lower sales funnel traffic that is more likely to result in a paying customer, not just another lead
 				br
 
 				h4.gray Search & Display Advertising Delivers:
@@ -207,9 +217,9 @@ html(lang='en')
 				br
 
 				ul
-					li <i class="fa fa-check"></i> Keyword Research & Campaign Structuring - Structuring your keywords and ads for maximum efficiency
-					li <i class="fa fa-check"></i> Account Optimization - Prioritizing individual keywords based on lead generation performance
-					li <i class="fa fa-check"></i> Reporting - Detailed performance data including advertising costs, lead generated, and cost-per-lead
+					li.sections <i class="fa fa-check"></i> Keyword Research & Campaign Structuring - Structuring your keywords and ads for maximum efficiency
+					li.sections <i class="fa fa-check"></i> Account Optimization - Prioritizing individual keywords based on lead generation performance
+					li.sections <i class="fa fa-check"></i> Reporting - Detailed performance data including advertising costs, lead generated, and cost-per-lead
 				br
 
 				p All activity is Pay-Per-Click (PPC) based and designed around lead generation.
@@ -227,7 +237,7 @@ html(lang='en')
 
 			section#social
 
-				h2 Social Lead Generation
+				h2.sections Social Lead Generation
 				h3 Finely Tuned Push marketing
 				br
 
@@ -243,20 +253,20 @@ html(lang='en')
 				br
 
 				ul
-					li <i class="fa fa-check"></i> Website visitor retargeting: Re-engage Facebook users who bounced from your site without registering, giving them a reason to reconsider your team with a strong call to action.
+					li.sections <i class="fa fa-check"></i> Website visitor retargeting: Re-engage Facebook users who bounced from your site without registering, giving them a reason to reconsider your team with a strong call to action.
 					br
-					li <i class="fa fa-check"></i> Retarget at the property type level: it's now possible to re-engage visitors based on the property type they last viewed on your website, reaching out to them with tailored and creative messaging.
+					li.sections <i class="fa fa-check"></i> Retarget at the property type level: it's now possible to re-engage visitors based on the property type they last viewed on your website, reaching out to them with tailored and creative messaging.
 					br
-					li <i class="fa fa-check"></i> Detailed demographic targeting: Target home owners in your area that may be interested in selling. A wide range of demographic is available for targeting, including: age, martial status, home ownership status, individual income.
+					li.sections <i class="fa fa-check"></i> Detailed demographic targeting: Target home owners in your area that may be interested in selling. A wide range of demographic is available for targeting, including: age, martial status, home ownership status, individual income.
 					br
 
 				h4.gray Our Social Advertising Package Includes:
 				br
 
 				ul
-					li <i class="fa fa-check"></i> Demographic Research & Campaign Structuring - Structuring your targeting and ads to capture the most relevant audience for lead generation.
-					li <i class="fa fa-check"></i> Account Optimization - Targeting adjustments based on lead generation and cost-per-lead.
-					li <i class="fa fa-check"></i> Reporting - Detailed performance data including advertising cossts, leads generated, and cost-per-lead.
+					li.sections <i class="fa fa-check"></i> Demographic Research & Campaign Structuring - Structuring your targeting and ads to capture the most relevant audience for lead generation.
+					li.sections <i class="fa fa-check"></i> Account Optimization - Targeting adjustments based on lead generation and cost-per-lead.
+					li.sections <i class="fa fa-check"></i> Reporting - Detailed performance data including advertising cossts, leads generated, and cost-per-lead.
 				br
 
 				p All activity is Pay-Per-Click (PPC) based and designed around lead generation.
@@ -274,22 +284,22 @@ html(lang='en')
 
 			section#faq 
 
-				h2 FAQ
+				h2.sections FAQ
 				br
 
-				h4 What happens when I click "Pay Now"? How am I billed?
+				h4.faq What happens when I click "Pay Now"? How am I billed?
 				br
 
 				p After you select your Marketing Upgrade and "Pay Now," you will receive a notification email detailing your package and budget upgrade. Our billing team will review the upgrade request and will confirm billing details with you, including a final confirmation and method of payment.
 				br
 
-				h4 When will my package upgrade take effect?
+				h4.faq When will my package upgrade take effect?
 				br
 
 				p All billing activity is processed at the beginning of each month. Once payment has been received, your upgrade will take immediate effect. If you wish to upgrade before the 1st of the month, kindly let our billing team know when they contact you to confirm. You will then be charged the full amount of the requested upgrade, and again at the beginning of the following month.
 				br
 
-				h4 Where can I learn more about the marketing packages?
+				h4.faq Where can I learn more about the marketing packages?
 				br
 
 				p Detailed information on our marketing packages and strategies is available within the 
