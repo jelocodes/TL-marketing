@@ -1,14 +1,11 @@
 $(document).ready(function() {
 
-	$('#elite').click(function(){
-		$('input.upgrade').val('ELITE');
-	});    
-	$('#professional').click(function(){
-		$('input.upgrade').val('PROFESSIONAL');
-	});    
-	$('#business').click(function(){
-		$('input.upgrade').val('BUSINESS');
-	}); 
+	$('[marketing-options]').click(function(){
+		var element = $(this); var type=$('[marketing-type].active').attr('marketing-type');
+		var options = element.attr('marketing-options');
+		$('input.upgrade').val(type+': '+options);
+	})
+
 
 	$('.uno').click(function(){
 		$('.uno').addClass('active');
@@ -20,7 +17,7 @@ $(document).ready(function() {
 	});    
 	$('.second').click(function(){
 		$('.second').addClass('active');
-		$('.seoTitle').text('Direct Response Paid Search');
+		$('.seoTitle').text('Paid Search Packages');
 		$('.uno').removeClass('active');
 		$('.third').removeClass('active');
 		$("a[href='#more']").attr('href', '#highimpact');
@@ -28,7 +25,7 @@ $(document).ready(function() {
 	});    
 	$('.third').click(function(){
 		$('.third').addClass('active');
-		$('.seoTitle').text('Social Lead Generation');
+		$('.seoTitle').text('Social Advertising');
 		$('.uno').removeClass('active');
 		$('.second').removeClass('active');
 		$("a[href='#highimpact']").attr('href', '#social');
@@ -48,6 +45,59 @@ $(document).ready(function() {
  
 	});   
 
+	$('.faq').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+	});
+
+	$('.social').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+	});
+
+	$('.highimpact').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+	});
+
+	$('.seo').click(function(){
+    $('html, body').animate({
+     	scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+	});
+
+	$('.modal').click(function(){
+  	$('body').addClass('modal-open');
+  	$('.modalBox').removeClass('hidden');
+  	$('.overlay').removeClass('hidden');
+	});
+
+	$('.close').click(function () {
+  	$('body').removeClass('modal-open');
+  	$('.modalBox').addClass('hidden');
+  	$('.overlay').addClass('hidden');
+	});
+
 	// $('nav ul li a').smoothScroll();
+
+	$(window).scroll(function() {
+    if ($(this).scrollTop() >= 90) {    
+        $('#topbutton').fadeIn("fast");       
+        $('#topbutton').fadeOut("fast");      
+    }
+	});
+
+	$('#topbutton').click(function() {            
+    $('body,html').animate({
+        scrollTop : 0                   
+    }, 500);
+	});
 
 });

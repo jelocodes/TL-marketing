@@ -17,13 +17,13 @@ html(lang='en')
 								a(href="#")
 									img.logo(src="img/logo.png")  
 							li.first 
-								a(href="#faq") FAQ
+								a.faq(href="#faq") FAQ
 							li 
-								a(href="#social") Social Advertising
+								a.social(href="#social") Social Advertising
 							li 
-								a(href="#highimpact") Paid Search Packages
+								a.highimpact(href="#highimpact") Paid Search Packages
 							li 
-								a(href="#seo") SEO Packages
+								a.seo(href="#seo") SEO Packages
 							li 
 								a(href="http://teamleads.com") Home
 
@@ -33,11 +33,11 @@ html(lang='en')
 				div.wrap 
 					ul.tabs.group
 						li.first.uno#home 
-							a.uno.active(href="#/one") First
+							a.uno.active(href="#/one", marketing-type="SEO")<i class="fa fa-search"></i>
 						li.second
-							a.second(href="#/two") Second
+							a.second(href="#/two", marketing-type="paid search")<i class="fa fa-bullseye"></i>
 						li.third
-							a.third(href="#/three") Third
+							a.third(href="#/three", marketing-type="social")<i class="fa fa-facebook"></i>
 						li
 							h5.seo.seoTitle Search Engine Optimization  
 							//- a(href="#more") Learn More
@@ -64,7 +64,7 @@ html(lang='en')
 							//- 	li
 							//- 		span.fontawesome-cloud blah4
 							div.pt-footer
-								button#business.subscribe.columns <i class="fa fa-line-chart"></i> Subscribe
+								button#business.default.subscribe.columns(marketing-options="business") <i class="fa fa-line-chart"></i> Subscribe
 
 						div.block.professional.f1
 							h2.title Professional
@@ -84,7 +84,7 @@ html(lang='en')
 							//- 	li
 							//- 		span.fontawesome-cloud blah4
 							div.pt-footer
-								button#professional.subscribe.columns <i class="fa fa-line-chart"></i> Subscribe
+								button#professional.default.subscribe.columns(marketing-options="professional") <i class="fa fa-line-chart"></i> Subscribe
 
 						div.block.business.f1
 							h2.title Elite
@@ -104,7 +104,7 @@ html(lang='en')
 							//- 	li
 							//- 			span.fontawesome-cloud blah4
 							div.pt-footer
-								button#elite.subscribe.columns <i class="fa fa-line-chart"></i> Subscribe
+								button#elite.default.subscribe.columns(marketing-options="elite") <i class="fa fa-line-chart"></i> Subscribe
 
 
 						//- p#two  2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, tempore, totam. Est, vel hic fuga officiis. Cum quis, magni tempora ea aspernatur natus adipisci repellat doloremque, laudantium distinctio totam, quam?
@@ -113,23 +113,24 @@ html(lang='en')
 					h2.select Select Your Upgrade 	
 					//- p.upgrade No Upgrade Selected	
 
-					form(action="api.php", class="purchase", method="post", id="upgrade")
+					form(action="/api/send_email", class="purchase", method="post", id="upgrade")
 						input(type="text", name="agent_package", value="No Upgrade Selected", class="upgrade", readonly)
 						input(type="text", name="agent_bugget", class="budget", placeholder="Enter Custom Budget")
 						input(type="text", name="agent_email", class="email", placeholder="Enter Agent Email")
 						input(type="submit", value="Pay Now", class="submitButton")
 						p.conditions I accept the 
-							a(href="#modal", id="link") Terms of Purchase
+							a(href="#modal", id="link", class="modal") Terms of Purchase
 							input#terms(type="checkbox", name="terms", required) 
-					div.overlay
-					div#modal
+					div.overlay.hidden
+					div.modalBox.hidden
 						h1 Terms of Purchase
 						
 						p <strong>Terms:</strong> Contracts for marketing may be terminated, or the Monthly Marketing Spend may be decreased, only upon Client providing Team Leads with a minimum of 90 clear days’ notice of termination or reduction. If any shorter period of termination or reduction notice is given Client shall still be obligated to pay for the full amount of contracted Monthly Marketing Spend for the next ensuing three (3) months. Although Team Leads will strive to generate as many leads as possible at the lowest cost per lead, the volume and cost per lead are dependent upon market and package.
 						br
-						p.conditions I accept the 
-							a(href="#modal") Terms of Purchase
-							input#checkbox(type="checkbox", name="terms", required) 
+						//- p.conditions I accept the 
+						//- 	a(href="#modal") Terms of Purchase
+						//- 	input#checkbox(type="checkbox", name="terms", required) 
+						a(href="#", class="close") &times;
 
 			
 			section#more
@@ -305,7 +306,13 @@ html(lang='en')
 				p Detailed information on our marketing packages and strategies is available within the 
 					a(href="http://help.teamleads.com/hc/en-us/categories/200304639-Marketing") Team Leads Help Center.
 
+		a(href="#top", id="topbutton")
+			i(class="fa fa-chevron-up home")
 
+  
+
+		script smoothScroll.init();
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+		script(src="dist/scripts/smooth-scroll.js")
 
 
