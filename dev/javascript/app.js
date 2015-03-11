@@ -136,11 +136,34 @@ $(document).ready(function() {
 		var postdata = form.serialize();
 		$.post(postUrl,postdata,function(data){
 			console.log(data);
+			var thankyouUrl = 'http://marketing.teamleads.com/thankyou.php?email='+data.email+'&package='+data.package;
 			$('.modalBox2').removeClass('hidden');
+			$('#thankyouModal').attr('src', thankyouUrl);
 		},'JSON')
 		return false;
 	})
 
 
-
 });
+
+
+// var thankyou = {
+// 	formData: {},
+// 	init:function(){
+// 		$.ajax({
+// 			url:'/api/send_email',
+// 			type: 'GET',
+// 			dataType: 'json',
+// 			success: thankyou.parseData()
+// 		});
+// 	},
+// 	parseData:function(responseData){
+// 		email = responseData.email;
+// 		console.log(email);
+// 		thankyou.updateDOM();
+// 	},
+
+// 	updateDOM: function(){
+// 		$('.email').text(thankyou.email);
+// 	}
+// }
