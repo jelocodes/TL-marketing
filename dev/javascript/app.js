@@ -6,6 +6,11 @@ $(document).ready(function() {
 		$('input.upgrade').val(type+': '+options);
 	})
 
+	$('[pricing-options]').click(function(){
+		var element = $(this); var type=$('[pricing-type]').attr('pricing-type');
+		$('input.budget').val(type);
+	})
+
 
 	$('.uno').click(function(){
 		$('.uno').addClass('active');
@@ -73,6 +78,27 @@ $(document).ready(function() {
     return false;
 	});
 
+	$('.subSeo').click(function(){
+	$('html, body').animate({
+	 	scrollTop: $( $(this).attr('href') ).offset().top
+	}, 500);
+	return false;
+	});
+
+	$('.subSearch').click(function(){
+	$('html, body').animate({
+	 	scrollTop: $( $(this).attr('href') ).offset().top
+	}, 500);
+	return false;
+	});
+
+	$('.subSocial').click(function(){
+	$('html, body').animate({
+	 	scrollTop: $( $(this).attr('href') ).offset().top
+	}, 500);
+	return false;
+	});
+
 	$('.modal').click(function(){
   	$('body').addClass('modal-open');
   	$('.modalBox').removeClass('hidden');
@@ -83,6 +109,10 @@ $(document).ready(function() {
   	$('body').removeClass('modal-open');
   	$('.modalBox').addClass('hidden');
   	$('.overlay').addClass('hidden');
+	});
+
+	$('.close2').click(function () {
+  	$('.modalBox2').addClass('hidden');
 	});
 
 	// $('nav ul li a').smoothScroll();
@@ -99,5 +129,18 @@ $(document).ready(function() {
         scrollTop : 0                   
     }, 500);
 	});
+
+	$('#upgrade').submit(function(){
+		var form = $(this);
+		var postUrl = form.attr('action');
+		var postdata = form.serialize();
+		$.post(postUrl,postdata,function(data){
+			console.log(data);
+			$('.modalBox2').removeClass('hidden');
+		},'JSON')
+		return false;
+	})
+
+
 
 });

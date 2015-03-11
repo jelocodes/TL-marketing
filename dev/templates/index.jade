@@ -50,8 +50,8 @@ html(lang='en')
 							h2.title Business
 							div.content
 								p.price 
-									sup   $ 
-									span 500
+									//- sup   $ 
+									span.price $500
 									sub /mo.
 								//- p.hint Perfect for freelancers
 							//- ul.features
@@ -64,14 +64,14 @@ html(lang='en')
 							//- 	li
 							//- 		span.fontawesome-cloud blah4
 							div.pt-footer
-								button#business.default.subscribe.columns(marketing-options="business") <i class="fa fa-line-chart"></i> Subscribe
+								button#business.default.subscribe.columns(marketing-options="business", pricing-options="$500/mo") <i class="fa fa-line-chart"></i> Subscribe
 
 						div.block.professional.f1
 							h2.title Professional
 							div.content
 								p.price
-									sup   $
-									span 1000
+									//- sup   $
+									span.price $1000
 									sub /mo.
 								//- p.hint Suitable for startups
 							//- ul.features
@@ -84,16 +84,16 @@ html(lang='en')
 							//- 	li
 							//- 		span.fontawesome-cloud blah4
 							div.pt-footer
-								button#professional.default.subscribe.columns(marketing-options="professional") <i class="fa fa-line-chart"></i> Subscribe
+								button#professional.default.subscribe.columns(marketing-options="professional", pricing-options="$1000/mo") <i class="fa fa-line-chart"></i> Subscribe
 
 						div.block.business.f1
 							h2.title Elite
 							div.content
 								p.price
-									sup $
-									span 1500
+									//- sup $
+									span.price $1500
 									sub /mo.
-								//- p.hint For established business
+								//- p.hint PER MONTH
 							//- ul.features
 							//- 	li 
 							//- 		span.fontawesome-cog blah
@@ -104,7 +104,7 @@ html(lang='en')
 							//- 	li
 							//- 			span.fontawesome-cloud blah4
 							div.pt-footer
-								button#elite.default.subscribe.columns(marketing-options="elite") <i class="fa fa-line-chart"></i> Subscribe
+								button#elite.default.subscribe.columns(marketing-options="elite", pricing-options="$1500/mo") <i class="fa fa-line-chart"></i> Subscribe
 
 
 						//- p#two  2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, tempore, totam. Est, vel hic fuga officiis. Cum quis, magni tempora ea aspernatur natus adipisci repellat doloremque, laudantium distinctio totam, quam?
@@ -116,7 +116,7 @@ html(lang='en')
 					form(action="/api/send_email", class="purchase", method="post", id="upgrade")
 						input(type="text", name="agent_package", value="No Upgrade Selected", class="upgrade", readonly)
 						input(type="text", name="agent_bugget", class="budget", placeholder="Enter Custom Budget")
-						input(type="text", name="agent_email", class="email", placeholder="Enter Agent Email")
+						input(type="text", id="email", name="agent_email", class="email", placeholder="Enter Agent Email")
 						input(type="submit", value="Pay Now", class="submitButton")
 						p.conditions I accept the 
 							a(href="#modal", id="link", class="modal") Terms of Purchase
@@ -131,6 +131,12 @@ html(lang='en')
 						//- 	a(href="#modal") Terms of Purchase
 						//- 	input#checkbox(type="checkbox", name="terms", required) 
 						a(href="#", class="close") &times;
+
+					div.modalBox2.hidden
+						
+						iframe(src="http://marketing.teamleads.com/thankyou.php", width="500", height="800")
+
+						a(href="#", class="close2") &times;
 
 			
 			section#more
@@ -185,7 +191,8 @@ html(lang='en')
 				br
 
 				div.subscribe
-					button.subscribe <i class="fa fa-line-chart"></i> Subscribe
+					a.subSeo(href="#seo")
+						button.subscribe <i class="fa fa-line-chart"></i> Subscribe
 				br
 
 			section#highimpact
@@ -233,7 +240,8 @@ html(lang='en')
 				br
 
 				div.subscribe
-					button.subscribe <i class="fa fa-line-chart"></i> Subscribe
+					a.subSearch(href="#seo")
+						button.subscribe <i class="fa fa-line-chart"></i> Subscribe
 				br
 
 			section#social
@@ -280,7 +288,8 @@ html(lang='en')
 				br
 
 				div.subscribe
-					button.subscribe <i class="fa fa-line-chart"></i> Subscribe
+					a.subSocial(href="#seo")
+						button.subscribe <i class="fa fa-line-chart"></i> Subscribe
 				br
 
 			section#faq 
