@@ -29,7 +29,7 @@ $package = $_GET['package'];
     <h1>Thank you for your upgrade!</h1>
     <br>
     <h2 id="thankyou">Please find the marketing package you selected below:</h2>
-    <?php echo $package; ?>
+    <p class="iframe"><?php echo $package; ?></p>
     <br>
     <p class="iframe">We have sent a confirmation email to <?php echo $email; ?> for your records. Our billing team will be in touch with you as soon as possible to confirm your package selection and billing information.</p>
     <br>
