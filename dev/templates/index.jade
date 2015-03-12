@@ -118,7 +118,7 @@ html(lang='en')
 
 					form(action="/api/send_email", class="purchase", method="post", id="upgrade")
 						input(type="text", name="agent_package", value="No Upgrade Selected", class="upgrade", readonly, required)
-						input(type="text", name="agent_bugget", class="budget", placeholder="Enter Custom Budget", required)
+						input(type="text", name="agent_bugget", class="budget", placeholder="Enter Custom Budget")
 						input(type="text", id="email", name="agent_email", class="email", placeholder="Enter Agent Email", required)
 						input(type="submit", value="Pay Now", class="submitButton")
 						p.conditions I accept the 

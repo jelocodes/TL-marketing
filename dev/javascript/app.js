@@ -11,19 +11,18 @@ $(document).ready(function() {
 		$('input.budget').val(type);
 	})
 
-	$('#email').focusout(function(){
+	$('button#business').click(function(){
+		$('input.budget').val('$500/mo');
+	})
 
-	     $('#email').filter(function(){
-	        var emil=$('#email').val();
-	        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-	         if( !emailReg.test( emil ) ) {
-	            alert('Please enter valid email');
-	         } else {
-	            alert('Thank you for your valid email');
-	            }
-	         })
-	     });
-	});
+	$('button#professional').click(function(){
+	$('input.budget').val('$1000/mo');
+	})
+
+	$('button#elite').click(function(){
+	$('input.budget').val('$1500/mo');
+	})
+
 
 
 	$('.uno').click(function(){
@@ -144,10 +143,17 @@ $(document).ready(function() {
     }, 500);
 	});
 
+	$("#upgrade").submit(function() {
+        var agentPackage = $("input.upgrade").val();
+        return "No Upgrade Selected" == agentPackage ? ($("input.submitButton").attr("readonly"), alert("Please select a package."), !1) : void 0
+    });
+
 	$('#upgrade').submit(function(){
+		var agentPackage = $("input.upgrade").val();
 		var form = $(this);
 		var postUrl = form.attr('action');
 		var postdata = form.serialize();
+		if (agentPackage != "No Upgrade Selected") {
 		$.post(postUrl,postdata,function(data){
 			console.log(data);
 			var thankyouUrl = 'http://marketing.teamleads.com/thankyou.php?email='+data.email+'&package='+data.package;
@@ -155,28 +161,7 @@ $(document).ready(function() {
 			$('#thankyouModal').attr('src', thankyouUrl);
 		},'JSON')
 		return false;
+		}
 	});
 
 });
-
-
-// var thankyou = {
-// 	formData: {},
-// 	init:function(){
-// 		$.ajax({
-// 			url:'/api/send_email',
-// 			type: 'GET',
-// 			dataType: 'json',
-// 			success: thankyou.parseData()
-// 		});
-// 	},
-// 	parseData:function(responseData){
-// 		email = responseData.email;
-// 		console.log(email);
-// 		thankyou.updateDOM();
-// 	},
-
-// 	updateDOM: function(){
-// 		$('.email').text(thankyou.email);
-// 	}
-// }
