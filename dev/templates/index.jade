@@ -26,6 +26,9 @@ html(lang='en')
 								a.seo(href="#seo") SEO Packages
 							li 
 								a(href="http://teamleads.com") Home
+				h1.logo2
+				a(href="#")
+					img.logo2(src="img/logo.png") 
 
 		div.wrapper
 			section#seo 
@@ -114,9 +117,9 @@ html(lang='en')
 					//- p.upgrade No Upgrade Selected	
 
 					form(action="/api/send_email", class="purchase", method="post", id="upgrade")
-						input(type="text", name="agent_package", value="No Upgrade Selected", class="upgrade", readonly)
-						input(type="text", name="agent_bugget", class="budget", placeholder="Enter Custom Budget")
-						input(type="text", id="email", name="agent_email", class="email", placeholder="Enter Agent Email")
+						input(type="text", name="agent_package", value="No Upgrade Selected", class="upgrade", readonly, required)
+						input(type="text", name="agent_bugget", class="budget", placeholder="Enter Custom Budget", required)
+						input(type="text", id="email", name="agent_email", class="email", placeholder="Enter Agent Email", required)
 						input(type="submit", value="Pay Now", class="submitButton")
 						p.conditions I accept the 
 							a(href="#modal", id="link", class="modal") Terms of Purchase
