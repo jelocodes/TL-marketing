@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	$.slidebars();
+
 	$('[marketing-options]').click(function(){
 		var element = $(this); var type=$('[marketing-type].active').attr('marketing-type');
 		var options = element.attr('marketing-options');
@@ -68,6 +70,13 @@ $(document).ready(function() {
         scrollTop: $( $(this).attr('href') ).offset().top
     }, 500);
     return false;
+	});
+
+	$('.modal').click(function(){
+	$('html, body').animate({
+	    scrollTop: $( $(this).attr('href') ).offset().top
+	}, 500);
+	return false;
 	});
 
 	$('.social').click(function(){

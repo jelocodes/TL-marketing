@@ -4,11 +4,27 @@ html(lang='en')
 		include includes/header 		
 	body		
 			header.header#header
-				button.btn-menu#btn-menu(data-icon-name="hambugerCross", type="button")
+				button.sb-toggle-left.btn-menu#btn-menu(data-icon-name="hambugerCross", type="button")
 					svg.toggle(height="64", version="1.1", width="64", xmlns="http://www.w3.org/2000/svg", viewBox="0 0 64 64")
 						g <path class="path" fill="#888" stroke="#888" stroke-width="5" stroke-linejoin="bevel" d="M5.0916789,20.818994C5.0916789,20.818994,58.908321,20.818994,58.908321,20.818994"></path>
 						<path class="path" fill="#888" stroke="#888" stroke-width="5" stroke-linejoin="bevel" d="m 5.1969746,31.909063 53.8166424,0" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></path>
 						<path class="path" fill="#888" stroke="#888" stroke-width="5" stroke-linejoin="bevel" d="M5.0916788,42.95698C5.0916788,42.95698,58.908321,42.95698,58.908321,42.95698"></path>
+
+				div.sb-slidebar.sb-left.sb-style-overlay
+					p.sb-close 
+						&times;
+					ul.slideNav				
+						li
+							img(class="navLogo", src="img/logo.png")
+						li 
+							a.sb-close(href="#seo") SEO Packages
+						li
+							a.sb-close(href="#highimpact") Paid Search 
+						li
+							a.sb-close(href="#social") Social Ads
+						li
+							a.sb-close(href="#faq") FAQ
+
 				div.menu#menu 
 					nav
 						ul
@@ -120,12 +136,13 @@ html(lang='en')
 						input(type="text", name="agent_package", value="No Upgrade Selected", class="upgrade", readonly, required)
 						input(type="text", name="agent_bugget", class="budget", placeholder="Enter Custom Budget")
 						input(type="text", id="email", name="agent_email", class="email", placeholder="Enter Agent Email", required)
-						input(type="submit", value="Pay Now", class="submitButton")
+						a(href="#modal2")
+							input(type="submit", value="Pay Now", class="submitButton")
 						p.conditions I accept the 
 							a(href="#modal", id="link", class="modal") Terms of Purchase
 							input#terms(type="checkbox", name="terms", required) 
 					div.overlay.hidden
-					div.modalBox.hidden
+					div.modalBox.hidden#modal
 						h1 Terms of Purchase
 						
 						p <strong>Terms:</strong> Contracts for marketing may be terminated, or the Monthly Marketing Spend may be decreased, only upon Client providing Team Leads with a minimum of 90 clear days’ notice of termination or reduction. If any shorter period of termination or reduction notice is given Client shall still be obligated to pay for the full amount of contracted Monthly Marketing Spend for the next ensuing three (3) months. Although Team Leads will strive to generate as many leads as possible at the lowest cost per lead, the volume and cost per lead are dependent upon market and package.
@@ -135,7 +152,7 @@ html(lang='en')
 						//- 	input#checkbox(type="checkbox", name="terms", required) 
 						a(href="#", class="close") &times;
 
-					div.modalBox2.hidden
+					div.modalBox2.hidden#modal2
 						
 						iframe#thankyouModal(src="http://marketing.teamleads.com/thankyou.php", width="500", height="800")
 
