@@ -145,9 +145,13 @@ $(document).ready(function() {
 
 	$("#upgrade").submit(function() {
         var agentPackage = $("input.upgrade").val();
-        return "No Upgrade Selected" == agentPackage ? ($("input.submitButton").attr("readonly"), alert("Please select a package."), !1) : void 0
+        if (agentPackage == "No Upgrade Selected") {
+        	sweetAlert('Please select a package.')
+        return false;
+        }
+        // return "No Upgrade Selected" == agentPackage ? ($("input.submitButton").attr("readonly"), sweetAlert('Please select a package.'), !1) : void 0
     });
-
+ 
     $("")
 
 	$('#upgrade').submit(function(){
@@ -164,10 +168,10 @@ $(document).ready(function() {
 			$('#thankyouModal').attr('src', thankyouUrl);
 		},'JSON')
 		return false;
-		} else {
-		alert('Please enter valid Email Address.')
+		} else if (agentPackage == "No Upgrade Selected" && validateEmail(sEmail)) {
+			sweetAlert('Please select a package.')
 		return false;
-		}
+		} 
 	});
 
 	function validateEmail(sEmail) {
@@ -176,6 +180,7 @@ $(document).ready(function() {
 	return true;
 	}
 	else {
+	sweetAlert('Please enter valid email.')
 	return false;
 	}
 	}
