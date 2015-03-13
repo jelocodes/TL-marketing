@@ -148,12 +148,15 @@ $(document).ready(function() {
         return "No Upgrade Selected" == agentPackage ? ($("input.submitButton").attr("readonly"), alert("Please select a package."), !1) : void 0
     });
 
+    $("")
+
 	$('#upgrade').submit(function(){
+		var sEmail = $("input.email").val();
 		var agentPackage = $("input.upgrade").val();
 		var form = $(this);
 		var postUrl = form.attr('action');
 		var postdata = form.serialize();
-		if (agentPackage != "No Upgrade Selected") {
+		if (agentPackage != "No Upgrade Selected" && validateEmail(sEmail)) {
 		$.post(postUrl,postdata,function(data){
 			console.log(data);
 			var thankyouUrl = 'http://marketing.teamleads.com/thankyou.php?email='+data.email+'&package='+data.package;
@@ -161,7 +164,22 @@ $(document).ready(function() {
 			$('#thankyouModal').attr('src', thankyouUrl);
 		},'JSON')
 		return false;
+		} else {
+		alert('Please enter valid Email Address.')
+		return false;
 		}
 	});
+
+	function validateEmail(sEmail) {
+	var filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+	if (filter.test(sEmail)) {
+	return true;
+	}
+	else {
+	return false;
+	}
+	}
+
+
 
 });
