@@ -8,4 +8,4 @@ SASS, Jade, semantic gs, Strongarm, Grunt
 
 #Why?
 
-Microsite for the marketing section of startup company to automate marketing package upgrades.
+Microsite for the marketing section of [secret startup name here] to automate the marketing package upgrade process.
