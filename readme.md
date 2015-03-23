@@ -8,5 +8,4 @@ SASS, Jade, semantic gs, Strongarm, Grunt
 
 #Why?
 
-Creating an MLS aggregator and automating the agent-buyer homebuying process yo.
-
+Microsite for the marketing section of startup company to automate marketing package upgrades.
